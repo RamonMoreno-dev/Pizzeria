@@ -12,7 +12,7 @@ public class Pizza extends Producto{
         return size;
     }
     public Pizza() {
-        super(0, "", 0.0);
+        super();
     }
 
     public Pizza(int id, String nombre, double precio, SIZE size) {

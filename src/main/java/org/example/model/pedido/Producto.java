@@ -1,6 +1,8 @@
 package org.example.model.pedido;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.NAME,
@@ -9,7 +11,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 )
 @JsonSubTypes({
         @JsonSubTypes.Type(value = Bebida.class, name = "Bebida"),
-        @JsonSubTypes.Type(value = Comida.class, name = "Comida")
+        @JsonSubTypes.Type(value = Pasta.class, name = "Pasta"),
+        @JsonSubTypes.Type(value = Pizza.class, name = "Pizza")
 })
 
 public abstract class Producto {
@@ -27,6 +30,11 @@ public abstract class Producto {
         this.nombre = nombre;
         this.precio = precio;
     }
+
+    public Producto() {
+        super();
+    }
+
     @JsonIgnore
     public int getId() {
         return id;

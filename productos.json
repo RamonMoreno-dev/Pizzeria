@@ -1,1 +1,22 @@
-{"id":0,"nombre":"Margarita","precio":7.99,"size":"GRANDE"}
+[
+  {
+    "tipo": "Pizza",
+    "nombre": "Pizza Margarita",
+    "precio": 9.5
+  },
+  {
+    "tipo": "Pizza",
+    "nombre": "Pizza 4 Quesos",
+    "precio": 11.0
+  },
+  {
+    "tipo": "Bebida",
+    "nombre": "Refresco de Cola 33cl",
+    "precio": 2.5
+  },
+  {
+    "tipo": "Bebida",
+    "nombre": "Agua Mineral 50cl",
+    "precio": 1.5
+  }
+]
